@@ -1,194 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — JAMAL OURHA</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Syne:wght@300;400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - JAMAL OURHA</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="grid-bg" aria-hidden="true"></div>
-
-  <!-- ── HEADER ── -->
-  <header>
-    <div class="logo-wrap">
-      <img class="logo" src="image/logo.jpeg" alt="Logo" onerror="this.style.display='none'">
-      <span class="logo-name">Jamal</span>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#service">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
-  </header>
-
-  <!-- Mobile drawer -->
-  <nav class="nav-drawer" id="navDrawer">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#service">Services</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- ── HERO ── -->
-  <section id="home">
-    <div class="hero-text fade-up">
-      <span class="hero-tag">Available for work</span>
-      <h1>
-        <span class="line1">Hello, I'm</span>
-        <span class="name">JAMAL <em>OURHA</em></span>
-      </h1>
-      <p class="hero-subtitle">
-        <span>Web Developer</span> — Crafting modern &amp; performant web experiences
-      </p>
-      <div class="hero-btns">
-        <a href="#projects" class="btn btn-primary">View Projects</a>
-        <a href="#contact" class="btn btn-outline">Contact Me</a>
-      </div>
-    </div>
-
-    <div class="hero-img-wrap fade-up" style="transition-delay:0.2s">
-      <img src="image/ja.jpg" alt="photo" />
-      <div class="corner corner-tl"></div>
-      <div class="corner corner-tr"></div>
-      <div class="corner corner-bl"></div>
-      <div class="corner corner-br"></div>
-    </div>
-  </section>
-
-  <!-- ── ABOUT ── -->
-  <section id="about">
-    <div class="sec-header fade-up">
-      <h2>Who <em>I Am</em></h2>
-      <div class="sec-divider"></div>
-    </div>
-    <div class="about-box fade-up">
-      <p>
-        I'm a <strong>Web Developer</strong> specialized in designing
-        <strong>modern, fast, and responsive</strong> websites using the latest technologies.
-        Passionate about clean code, intuitive interfaces, and delivering
-        high-quality digital products.
-      </p>
-    </div>
-  </section>
-
-  <!-- ── SERVICES ── -->
-  <section id="service">
-    <div class="sec-header fade-up">
-      <h2>What I <em>Do</em></h2>
-      <div class="sec-divider"></div>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-up">
-        <h3>Frontend Development</h3>
-        <p>HTML, CSS.</p>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.1s">
-        <h3>Backend Development</h3>
-        <p>PHP.</p>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.15s">
-        <h3>Bureautique</h3>
-        <p>Word, Excel, Access and PowerPoint.</p>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.2s">
-        <h3>Portfolio Design</h3>
-        <p>Designing and developing professional personal websites.</p>
-      </div>
-      <div class="service-card fade-up" style="transition-delay:0.25s">
-        <h3>Visual Basic Projects</h3>
-        <p>Websites and desktop application development with VB.NET.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROJECTS ── -->
-  <section id="projects">
-    <div class="sec-header fade-up">
-      <h2>My <em>Work</em></h2>
-      <div class="sec-divider"></div>
-    </div>
-    <div class="projects-grid">
-      <div class="project-card fade-up">
-        <div class="project-body1">
-          <h3>E-Commerce Store</h3>
-          <p>Comprehensive shopping platform.</p>
-          <div class="tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <a href="#" class="project-link">View Project →</a>
+    <header>
+        <div class="logo">
+            <img class="logo-image" src="image/logo.jpeg" alt="Logo">
+            <span class="logo-name">Jamal</span>
         </div>
-      </div>
-      <div class="project-card fade-up" style="transition-delay:0.1s">
-        <div class="project-body2">
-          <h3>Car Rental System</h3>
-          <p>Professional car rental management system with full CRUD operations.</p>
-          <div class="tags"><span>Access</span></div>
-          <a href="Agence de location(JAMAL)" class="project-link">View Project →</a>
+        <nav class="menu" id="menu"> 
+            <a href="#home" onclick="closeMenu()">Home</a>
+            <a href="#about" onclick="closeMenu()">About</a>
+            <a href="#service" onclick="closeMenu()">Service</a>
+            <a href="#projects" onclick="closeMenu()">Projects</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+        </nav>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <section id="home" class="home">
+        <div class="content">
+            <h2>Hello I Am <span>JAMAL<br><em>OURHA</em></span></h2>
+            <p>Web Developer</p>
+            <div class="home-buttons">
+                <a href="#projects">View My Projects</a>
+                <a href="#contact">Contact Me</a>
+            </div>
         </div>
-      </div>
-      <div class="project-card fade-up" style="transition-delay:0.2s">
-        <div class="project-body3">
-          <h3>Invoice Management App</h3>
-          <p>Desktop application for managing client invoices of a product sales company.</p>
-          <div class="tags"><span>VB.NET</span></div>
-          <a href="#" class="project-link">View Project →</a>
+        <img src="image/jamal.jpg" alt="photo">
+    </section>
+
+    <section id="about" class="about">
+        <h2>Who I Am</h2>
+        <p>Web developer specialized in designing modern and fast websites using the latest technologies</p>
+    </section>
+
+    <section id="service">
+        <h2>My Services</h2>
+        <div class="service">
+            <a class="service1" id="s1"></a>
+            <a class="service1" id="s2"></a>
+            <a class="service1" id="s3"></a>
+            <a class="service1" id="s4"></a>
+            <a class="service1" id="s5"></a>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ── CONTACT ── -->
-  <footer>
-    <div id="contact">
-      <div class="sec-header fade-up">
-        <h2>Get In <em>Touch</em></h2>
-        <div class="sec-divider"></div>
-      </div>
-      <p class="fade-up">I'd be happy to work on your next project.</p>
-      <p class="fade-up">Reach out via email and I'll get back to you as soon as possible.</p>
-      <a href="mailto:ourhajamal@gmail.com" class="btn-glow fade-up">
-        Contact Me
-      </a>
-    </div>
-  </footer>
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project">
+            <div class="project1">
+                <div class="project-info">
+                    <h3>E-commerce store</h3>
+                    <p>Comprehensive shopping platform</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JS</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+            <div class="project2">
+                <div class="project-info">
+                    <h3>Car management system</h3>
+                    <p>Professional car rental management system</p>
+                    <div class="project-tags">
+                        <span>Access</span>
+                    </div>
+                    <a href="Agence de location(JAMAL).accdb" class="project-link">View Project →</a>
+                </div>
+            </div>
+            <div class="project3">
+                <div class="project-info">
+                    <h3>Desktop invoices management application</h3>
+                    <p>Project for managing invoices of client of a product sales company</p>
+                    <div class="project-tags">
+                        <span>VB.NET</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    // Hamburger
-    const hamburger = document.getElementById('hamburger');
-    const navDrawer  = document.getElementById('navDrawer');
-    hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('open');
-      navDrawer.classList.toggle('open');
-    });
-    navDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        hamburger.classList.remove('open');
-        navDrawer.classList.remove('open');
-      });
-    });
+    <footer>
+        <div id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <p>I'd be happy to work on your next project</p>
+            <p>You can reach me via email, and I'll get back to you as soon as possible</p>
+            <a href="mailto:ourhajamal@gmail.com" class="contact-btn">Contact Me</a>
+        </div>
+    </footer>
 
-    // Scroll fade-in
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          observer.unobserve(e.target);
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('active');
         }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-  </script>
+
+        function closeMenu() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            menu.classList.remove('open');
+            hamburger.classList.remove('active');
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                menu.classList.remove('open');
+                hamburger.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
